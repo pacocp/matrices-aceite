@@ -32,7 +32,7 @@ def to_excel(old, new, position):
     old.to_excel(writer, index=False,header=False, sheet_name='Matriz Original')
     new.to_excel(writer, index=False,header=False, sheet_name='Matriz Reordenada')
     position.to_excel(writer, index=False, header=False, sheet_name='Matriz Posiciones')
-    writer.save()
+    writer.close()
     processed_data = output.getvalue()
     return processed_data
 
